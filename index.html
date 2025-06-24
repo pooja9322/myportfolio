@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pooja Patil - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .colorful-header {
+      text-align: center;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    .name-highlight {
+      color: #ffea00;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 1rem 0;
+      border: 3px solid white;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+
+    button {
+      background-color: #ffffff;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #764ba2;
+    }
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .project-box {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-box:hover {
+      transform: translateY(-5px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #764ba2;
+      color: white;
+    }
+
+    .dark {
+      background-color: #1e1e1e;
+      color: #ddd;
+    }
+
+    .dark .colorful-header,
+    .dark footer {
+      background: #333;
+    }
+
+    .dark .project-box {
+      background-color: #2a2a2a;
+    }
+
+    .dark button {
+      background-color: #555;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .project-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="colorful-header">
+    <h1>Hello, I'm <span class="name-highlight">Pooja</span></h1>
+    <p class="subtitle">UI Developer | Web Designer</p>
+    <img src="myphoto.jpg" alt="My Photo" class="profile-photo" />
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/pooja-patil-853ba5244" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:pp3642122@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate web designer and front-end developer who builds clean, responsive websites. I love solving UI/UX challenges, and I’m always learning new tools. I'm best fit for roles such as UI/UX Developer, Frontend Developer, and Web Designer.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+      <div class="project-box">
+        <h3>Portfolio Website</h3>
+        <p>This website showcases my skills, projects, and contact details using HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>Hospital & Healthcare System</h3>
+        <p>A web app built in ASP.NET and SQL Server to manage appointments, doctors, and patient records.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pooja Patil</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
